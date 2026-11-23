@@ -4194,7 +4194,7 @@ window.AMGH_ASSETS = window.AMGH_ASSETS || {
 .amgh-inst { position: absolute; inset: 0; z-index: 5; pointer-events: none; color: var(--amgh-navy); }
 .amgh-inst p, .amgh-inst_h { margin: 0; }
 .amgh-inst_h { font: inherit; color: inherit; }
-.amgh-inst_a, .amgh-inst_b { position: absolute; display: block; font-size: clamp(40px, min(4.7vw, 8.4vh), 88px); font-weight: 500;
+.amgh-inst_a, .amgh-inst_b { position: absolute; display: block; font-size: clamp(34px, min(4.7vw, 8.4vh, calc((45.6vw - 33.8vh - 70px) / 4.8)), 88px); font-weight: 500;
   line-height: .98; letter-spacing: -.035em; will-change: transform; }
 .amgh-inst_a { left: var(--amgh-gut); top: 21%; }
 .amgh-inst_b { right: var(--amgh-gut); top: 57%; text-align: right; }
@@ -4209,7 +4209,11 @@ window.AMGH_ASSETS = window.AMGH_ASSETS || {
   text-transform: uppercase; margin-bottom: 14px !important; }
 .amgh-inst_tema i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none; }
 .amgh-r { display: block; animation: amgh-rise .9s cubic-bezier(.2,.7,.2,1) both; }
-.amgh-inst_lead { margin-top: .55em; font-size: .3em; font-weight: 400; line-height: 1.3; letter-spacing: -.01em; max-width: 19em; animation-delay: .25s; }
+.amgh-inst_lead { margin-top: .55em; font-size: .3em; font-weight: 400; line-height: 1.3; letter-spacing: -.01em; max-width: 15.5em; animation-delay: .25s; }
+/* r28: no desktop, título em 4 linhas antes do aro da janela e "Descubra" logo abaixo; no celular, .amgh-inst_side */
+.amgh-inst_desc { display: block; margin-top: .8em; font-size: .4em; font-weight: 500; line-height: 1.15; letter-spacing: -.015em; max-width: 11.5em; animation-delay: .4s; }
+.amgh-inst_desctxt { display: block; margin-top: .75em; font-size: .21em; font-weight: 400; line-height: 1.45; letter-spacing: 0; max-width: 21em; opacity: .82; animation-delay: .5s; }
+@media (min-width: 768px) { .amgh-inst_side { display: none; } }
 .amgh-inst_sub { margin-bottom: 14px !important; }
 .amgh-inst_side .amgh-r { animation-delay: .6s; }
 /* a dica entra por último; a animação fica nos filhos, porque a opacidade da própria dica é do scroll */
@@ -4228,10 +4232,11 @@ window.AMGH_ASSETS = window.AMGH_ASSETS || {
   .amgh-inst_a { top: 74px; }
   .amgh-inst_b { top: 134px; }
   .amgh-inst_side { right: var(--amgh-gut); bottom: calc(104px + env(safe-area-inset-bottom, 0px)); max-width: none; }
-  .amgh-inst_sub { font-size: 15px; max-width: 20em; }
+  .amgh-inst_sub { font-size: 18px; line-height: 1.2; max-width: 18em; }
+  .amgh-brd, .amgh-inst_desc, .amgh-inst_desctxt { display: none; }
   .amgh-inst_rule { margin: 10px 0; }
   .amgh-inst_lead { font-size: 14px; max-width: 17em; margin-top: .4em; }
-  .amgh-inst_txt { display: none; }   /* no celular não cabe sem cobrir a janela; a frente de atuação fica */
+  .amgh-inst_txt { display: none; }   /* no celular não cabe sem cobrir a janela */
   .amgh-inst_areas { font-size: 9.5px; }
   .amgh-inst_tema { font-size: 10px; margin-bottom: 10px !important; }
   .amgh-cue { left: var(--amgh-gut); right: auto; width: auto; bottom: calc(64px + env(safe-area-inset-bottom, 0px));
@@ -4339,12 +4344,13 @@ window.AMGH_ASSETS = window.AMGH_ASSETS || {
     </div>
     <!-- ABERTURA INSTITUCIONAL. Textos editáveis aqui. -->
     <div class="amgh-inst">
-      <div class="amgh-inst_h"><span class="amgh-inst_a"><span class="amgh-r">Visto de nômade<br>digital para<br>a Espanha.</span>
-        <span class="amgh-r amgh-inst_lead">Seu trabalho continua, sua vida ganha um novo destino.</span></span></div>
+      <div class="amgh-inst_h"><span class="amgh-inst_a"><span class="amgh-r">Visto de<br class="amgh-brd"> nômade<br>digital para<br>a Espanha.</span>
+        <span class="amgh-r amgh-inst_lead">Seu trabalho continua, sua vida ganha um novo destino.</span>
+        <span class="amgh-r amgh-inst_desc">Descubra como morar na Espanha pode caber na vida que você já tem.</span>
+        <span class="amgh-r amgh-inst_desctxt">Entenda quem pode pedir e o que é preciso comprovar.</span></span></div>
       <div class="amgh-inst_side"><div class="amgh-r">
-        <p class="amgh-inst_sub">Hub 360° de soluções internacionais para pessoas e empresas.</p>
-        <p class="amgh-inst_txt">Conectamos pessoas e empresas às soluções certas para cada jornada internacional.</p>
-        <p class="amgh-inst_areas"><span>Imigração ·</span> <span>Advocacia Internacional ·</span> <span>Investimento &amp; Tributação ·</span> <span>Negócios Internacionais</span></p>
+        <p class="amgh-inst_sub">Descubra como morar na Espanha pode caber na vida que você já tem.</p>
+        <p class="amgh-inst_txt">Entenda quem pode pedir e o que é preciso comprovar.</p>
       </div></div>
     </div>
     <div class="amgh-cue" aria-hidden="true"><i></i><span>Role para baixo</span><span>para começar a viagem</span></div>
@@ -4361,7 +4367,7 @@ window.AMGH_ASSETS = window.AMGH_ASSETS || {
           <div class="tag_dot"></div><h1 class="tag_text">Visto de nômade digital para a Espanha</h1><div class="tag_dot"></div>
         </div>
         <div class="lps-hero_rich-text amgh-hero_title"><div class="amgh-hero_h">Sua carreira pode continuar.<br><span>Sua vida pode ganhar um <span class="amgh-hl">novo destino.</span></span></div></div>
-        <p class="amgh-hero_text">Descubra como viver legalmente na Espanha enquanto continua trabalhando remotamente.</p>
+        <p class="amgh-hero_text">Veja se o seu perfil se encaixa e qual caminho faz sentido para você.</p>
         <div class="amgh-hero_cta">
           <a href="#section-form" class="sc-primary-button w-inline-block">
             <div class="button-text">Avalie seu perfil para a Espanha</div>
